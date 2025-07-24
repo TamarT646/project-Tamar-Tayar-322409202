@@ -128,4 +128,30 @@ button:hover {
   button {
     max-width: 100%;
   }
+  .view-link-container {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  direction: rtl;
+}
+
+.view-link {
+  background-color: #606c54;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.view-link:hover,
+.view-link:focus {
+  background-color: #473a60;
+  outline: none;
+}
+
 }

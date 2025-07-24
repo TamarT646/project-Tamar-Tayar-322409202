@@ -13,11 +13,9 @@
       <label>שם מלא:
         <input type="text" id="fullName" required />
       </label>
-
       <label>אימייל:
         <input type="email" id="email" required />
       </label>
-
       <label>סוג לחש:
         <select id="spellType">
           <option value="">בחר סוג</option>
@@ -26,22 +24,18 @@
           <option value="חיזוק">חיזוק</option>
         </select>
       </label>
-
       <label>רמת ידע (1-10):
         <input type="number" id="knowledge" min="1" max="10" />
       </label>
-
       <label>קיים שרביט?
         <select id="hasWand">
           <option value="כן">כן</option>
           <option value="לא">לא</option>
         </select>
       </label>
-
       <label>מספר ניסיונות קודמים:
         <input type="number" id="attempts" min="0" />
       </label>
-
       <label>חתימת מדריך:
         <input type="text" id="instructorSignature" />
       </label>
@@ -52,20 +46,10 @@
 
     <section id="successMessage" class="success"></section>
 
-    <hr />
+    <div class="view-link-container">
+      <a href="view.html" class="view-link">לעמוד הצגת כל הבקשות</a>
+    </div>
 
-    <section id="filters">
-      <label>סנן לפי סוג לחש:
-        <select id="filterType">
-          <option value="">הצג הכל</option>
-          <option value="התקפי">התקפי</option>
-          <option value="הגנתי">הגנתי</option>
-          <option value="חיזוק">חיזוק</option>
-        </select>
-      </label>
-    </section>
-
-    <section id="spellRequests"></section>
   </main>
 
   <script src="script.js"></script>
