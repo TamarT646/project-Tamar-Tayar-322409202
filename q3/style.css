@@ -1,0 +1,131 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #d0d0d0;
+  direction: rtl;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  background: rgb(253, 253, 243);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  width: 100%;
+  max-width: 400px;
+}
+
+input, select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-top: 0.3rem;
+}
+
+button {
+  background-color: #606c54;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #473a60;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#filters {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#filters label {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  gap: 0.5rem;
+}
+
+#filters select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+#spellRequests {
+  margin-top: 2rem;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 1rem auto;
+  background-color: #c8cfc6;
+  border-radius: 6px;
+  max-width: 500px;
+}
+
+.card p {
+  margin: 0.3rem 0;
+}
+
+.status-select {
+  margin-top: 0.5rem;
+}
+@media (max-width: 440px) {
+  main {
+    padding: 1.5rem 1rem;
+  }
+
+  label {
+    max-width: 100%;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  button {
+    max-width: 100%;
+  }
+}
