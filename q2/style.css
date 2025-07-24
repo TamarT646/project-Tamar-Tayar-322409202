@@ -1,8 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #e0e0e0;
   display: flex;
+  overflow-x: hidden; 
 }
 
 .side-menu {
@@ -36,7 +41,7 @@ body {
 }
 
 .main-header {
-     position: fixed;
+  position: fixed;
   top: 0;
   right: 180px;
   left: 0;
@@ -56,7 +61,6 @@ body {
   overflow-wrap: break-word;
   line-height: 1.2; 
 }
-
 .main-header h1 {
   margin: 0 0 0.3rem 0;
   font-size: 1.2rem;
@@ -64,7 +68,6 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 .main-header p {
   margin: 0;
   white-space: nowrap;
@@ -84,12 +87,12 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
-
 .card {
   background-color: white;
   border-radius: 10px;
   padding: 1rem;
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
@@ -97,11 +100,9 @@ body {
   transition: transform 0.2s, box-shadow 0.2s;
   position: relative;
 }
-
 .card:hover {
   transform: scale(1.03);
 }
-
 .card:target {
   outline: 3px solid #f4a261;
   box-shadow: 0 0 15px 4px #7e2a11;
@@ -109,7 +110,6 @@ body {
   transition: transform 0.3s, box-shadow 0.3s;
   z-index: 10;
 }
-
 .image {
   position: relative;
   width: 100%;
@@ -119,8 +119,7 @@ body {
   border-radius: 5px;
   display: block;
 }
-
-.image::after {
+.image:after {
   content: attr(data-tooltip);
   position: absolute;
   bottom: 100%;
@@ -137,8 +136,7 @@ body {
   transform: translateY(-8px);
   z-index: 10;
 }
-
-.image:hover::after {
+.image:hover:after {
   opacity: 1;
 }
 
@@ -159,7 +157,6 @@ body {
   background-color: #5e60ce;
 }
 
-/* כפתור פאניקה */
 .panic-footer {
   position: fixed;
   bottom: 0;
@@ -172,7 +169,6 @@ body {
   box-sizing: border-box;
   border-top: 3px solid #a10315;
 }
-
 .panic-footer button {
   background-color: white;
   color: #753e47;
@@ -184,19 +180,25 @@ body {
   font-weight: bold;
   transition: background-color 0.2s;
 }
-
 .panic-footer button:hover {
   background-color: #ffe0e0;
+}
+
+.mobile-nav {
+  display: none;
 }
 
 @media (max-width: 768px) {
   .main-header {
     height: auto;
     font-size: 0.85rem;
-    padding: 0.8rem 1rem;
     right: 0;
     left: 0;
     width: 100%;
+    text-align: center;
+    align-items: center;
+    margin-top: 40px;
+    padding: 0.5rem;
   }
   .side-menu {
     display: none;
@@ -205,5 +207,22 @@ body {
     margin-right: 0;
     margin-top: 100px;
     padding-bottom: 70px;
+  }
+  .mobile-nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #8e807d;
+    color: white;
+    justify-content: space-around;
+    padding: 0.4rem;
+    z-index: 1002;
+    font-size: 0.8rem;
+  }
+  .mobile-nav a {
+    color: white;
+    text-decoration: none;
   }
 }
